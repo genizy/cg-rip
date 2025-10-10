@@ -11,7 +11,7 @@
       style="position:fixed;top:0;left:0;width:100%;height:100%;outline:none"></canvas>
 
     <script>
-    const SPLIT_MAP = {"CrazyGames.wasm.br": null, "CrazyGames.data.br": null};
+    const SPLIT_MAP = {"CrazyGames.wasm": null, "CrazyGames.data": null};
     </script>
 
     <script>
@@ -85,9 +85,9 @@
       const canvas = document.querySelector("#unity-canvas");
       const loaderUrl = "Build/CrazyGames.loader.js";
       const config = {
-        dataUrl: "Build/CrazyGames.data.br",
-        frameworkUrl: "Build/CrazyGames.framework.js.br",
-        codeUrl: "Build/CrazyGames.wasm.br",
+        dataUrl: "Build/CrazyGames.data",
+        frameworkUrl: "Build/CrazyGames.framework.js",
+        codeUrl: "Build/CrazyGames.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Fortzone Battle Royale",
         productName: "Fortzone Battle Royale",

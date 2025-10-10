@@ -11,7 +11,7 @@
       style="position:fixed;top:0;left:0;width:100%;height:100%;outline:none"></canvas>
 
     <script>
-    const SPLIT_MAP = {"Layers.wasm.br": null, "Layers.data.br": null};
+    const SPLIT_MAP = {"Layers.wasm": null, "Layers.data": null};
     </script>
 
     <script>
@@ -85,9 +85,9 @@
       const canvas = document.querySelector("#unity-canvas");
       const loaderUrl = "Build/Layers.loader.js";
       const config = {
-        dataUrl: "Build/Layers.data.br",
-        frameworkUrl: "Build/Layers.framework.js.br",
-        codeUrl: "Build/Layers.wasm.br",
+        dataUrl: "Build/Layers.data",
+        frameworkUrl: "Build/Layers.framework.js",
+        codeUrl: "Build/Layers.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Layers Roll",
         productName: "Layers Roll",

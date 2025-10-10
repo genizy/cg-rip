@@ -11,7 +11,7 @@
       style="position:fixed;top:0;left:0;width:100%;height:100%;outline:none"></canvas>
 
     <script>
-    const SPLIT_MAP = {"WebGL.wasm.br": null};
+    const SPLIT_MAP = {"WebGL.wasm": null};
     </script>
 
     <script>
@@ -85,9 +85,9 @@
       const canvas = document.querySelector("#unity-canvas");
       const loaderUrl = "Build/WebGL.loader.js";
       const config = {
-        dataUrl: "Build/WebGL.data.br",
-        frameworkUrl: "Build/WebGL.framework.js.br",
-        codeUrl: "Build/WebGL.wasm.br",
+        dataUrl: "Build/WebGL.data",
+        frameworkUrl: "Build/WebGL.framework.js",
+        codeUrl: "Build/WebGL.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Lazy Jumper",
         productName: "Lazy Jumper",
