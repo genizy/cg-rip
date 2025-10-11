@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   </head>
   <body style="margin:0;padding:0" class="noselect">
+    <div id="loading-text" style="color: black; font-size: 48px; font-family: cursive; text-align: center; margin-top: 20px;">LOADING...</div>
     <canvas id="unity-canvas"
       style="position:fixed;top:0;left:0;width:100%;height:100%;outline:none"></canvas>
 
@@ -42,11 +43,23 @@
 
     async function preMergeAll() {
       const map = {};
-      for (const [file, _] of Object.entries(SPLIT_MAP)) {
+      const files = Object.entries(SPLIT_MAP);
+      const total = files.length;
+      let done = 0;
+
+      const loadingText = document.getElementById("loading-text");
+
+      for (const [file, _] of files) {
         const merged = await mergeParts("Build/" + file);
         map[file] = merged;
+        done++;
+        const percent = Math.floor((done / total) * 100);
+        loadingText.innerText = `LOADING... ${percent}%`;
         console.log("Premerged:", file, "→", merged);
       }
+
+      loadingText.style.display = "none";
+
       return map;
     }
 
